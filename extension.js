@@ -16,6 +16,7 @@ function updateContextForActiveEditor() {
     const config = vscode.workspace.getConfiguration(null);
     
     let isEnabled = false;
+    let isSupportedLanguage = false;
     let settingName = '';
     let settingValue = null;
     
@@ -23,10 +24,11 @@ function updateContextForActiveEditor() {
         // Check both possible HTML scroll sync settings
         const scrollPreviewWithEditor = config.get('html.preview.scrollPreviewWithEditor', true);
         const scrollEditorWithPreview = config.get('html.preview.scrollEditorWithPreview', true);
+        isSupportedLanguage = true;
         
         settingName = 'html.preview.scrollPreviewWithEditor';
         settingValue = config.inspect(settingName);
-        isEnabled = scrollPreviewWithEditor && scrollEditorWithPreview;
+        isEnabled = scrollEditorWithPreview | scrollPreviewWithEditor;
         
         console.log(`[ToggleScrollSync] HTML file detected`);
         console.log(`[ToggleScrollSync]   Setting: ${settingName}`);
@@ -39,10 +41,11 @@ function updateContextForActiveEditor() {
         // Check both possible Markdown scroll sync settings
         const scrollEditorWithPreview = config.get('markdown.preview.scrollEditorWithPreview', true);
         const scrollPreviewWithEditor = config.get('markdown.preview.scrollPreviewWithEditor', true);
+        isSupportedLanguage = true;
         
         settingName = 'markdown.preview.scrollEditorWithPreview';
         settingValue = config.inspect(settingName);
-        isEnabled = scrollEditorWithPreview;
+        isEnabled = scrollEditorWithPreview | scrollPreviewWithEditor;
         
         console.log(`[ToggleScrollSync] Markdown file detected`);
         console.log(`[ToggleScrollSync]   Setting: ${settingName}`);
@@ -51,12 +54,14 @@ function updateContextForActiveEditor() {
         console.log(`[ToggleScrollSync]   Effective value: ${isEnabled}`);
         console.log(`[ToggleScrollSync]   scrollEditorWithPreview: ${scrollEditorWithPreview}`);
         console.log(`[ToggleScrollSync]   scrollPreviewWithEditor: ${scrollPreviewWithEditor}`);
+    }
+    
+    if (isSupportedLanguage) {
+        console.log(`[ToggleScrollSync] Setting context toggleScrollSync.enabled to: ${isEnabled}`);
+        vscode.commands.executeCommand('setContext', 'toggleScrollSync.enabled', isEnabled);
     } else {
         console.log(`[ToggleScrollSync] Unsupported language: ${langId}, hiding commands`);
     }
-    
-    console.log(`[ToggleScrollSync] Setting context toggleScrollSync.enabled to: ${isEnabled}`);
-    vscode.commands.executeCommand('setContext', 'toggleScrollSync.enabled', isEnabled);
 }
 
 function activate(context) {
@@ -77,14 +82,14 @@ function activate(context) {
             console.log('[ToggleScrollSync] Setting markdown.preview.scrollPreviewWithEditor to true');
             await config.update('markdown.preview.scrollPreviewWithEditor', true, vscode.ConfigurationTarget.Workspace);
 
-            // Force refresh Markdown preview to apply changes
-            console.log('[ToggleScrollSync] Refreshing Markdown preview...');
-            try {
-                await vscode.commands.executeCommand('markdown.preview.refresh');
-            } catch (refreshError) {
-                console.log('[ToggleScrollSync] Preview refresh command not available or failed:', refreshError);
-                // This is OK - the preview might not be open or the command might not exist
-            }
+            // // Force refresh Markdown preview to apply changes
+            // console.log('[ToggleScrollSync] Refreshing Markdown preview...');
+            // try {
+            //     await vscode.commands.executeCommand('markdown.preview.refresh');
+            // } catch (refreshError) {
+            //     console.log('[ToggleScrollSync] Preview refresh command not available or failed:', refreshError);
+            //     // This is OK - the preview might not be open or the command might not exist
+            // }
 
             // Update context to show/hide appropriate commands
             // Delay context update to avoid Command Palette auto-executing the next command
@@ -117,14 +122,14 @@ function activate(context) {
             console.log('[ToggleScrollSync] Setting markdown.preview.scrollPreviewWithEditor to false');
             await config.update('markdown.preview.scrollPreviewWithEditor', false, vscode.ConfigurationTarget.Workspace);
 
-            // Force refresh Markdown preview to apply changes
-            console.log('[ToggleScrollSync] Refreshing Markdown preview...');
-            try {
-                await vscode.commands.executeCommand('markdown.preview.refresh');
-            } catch (refreshError) {
-                console.log('[ToggleScrollSync] Preview refresh command not available or failed:', refreshError);
-                // This is OK - the preview might not be open or the command might not exist
-            }
+            // // Force refresh Markdown preview to apply changes
+            // console.log('[ToggleScrollSync] Refreshing Markdown preview...');
+            // try {
+            //     await vscode.commands.executeCommand('markdown.preview.refresh');
+            // } catch (refreshError) {
+            //     console.log('[ToggleScrollSync] Preview refresh command not available or failed:', refreshError);
+            //     // This is OK - the preview might not be open or the command might not exist
+            // }
 
             // Update context to show/hide appropriate commands
             // Delay context update to avoid Command Palette auto-executing the next command
