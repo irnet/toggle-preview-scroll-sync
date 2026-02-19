@@ -3,7 +3,7 @@
 This file provides guidance to agents when working with code in this repository.
 
 ## Project Overview
-Minimal VS Code extension that adds "Toggle Scroll Sync" command to toggle scroll synchronization between editor and preview panels for HTML/Markdown files.
+Minimal VS Code extension that adds "Toggle Preview Scroll Sync" command to toggle scroll synchronization between editor and preview panels for HTML/Markdown files.
 
 ## Development Commands
 - **Install dependencies**: `npm install` (if adding dependencies)
@@ -14,9 +14,10 @@ Minimal VS Code extension that adds "Toggle Scroll Sync" command to toggle scrol
 ## Critical Implementation Details
 - Extension uses **CommonJS** (require/module.exports), NOT ES modules
 - Settings are saved with `vscode.ConfigurationTarget.Workspace` - affects only current workspace, allowing different settings per project
-- Toggle logic inverts value: `newValue = !currentHtml`, then applies same value to all three settings
-- Status message: "ON" when `newValue` is true (sync enabled), "OFF" when `newValue` is false (sync disabled)
-- Command available in Command Palette: `Ctrl+Shift+P` → "Toggle Scroll Sync"
+- Each command performs specific action: enable command sets all settings to `true`, disable command sets all settings to `false`
+- Status message: "ON" when enabled (sync enabled), "OFF" when disabled (sync disabled)
+- Two separate commands with different IDs: `toggleScrollSync.enable` and `toggleScrollSync.disable`
+- Command available in Command Palette: `Ctrl+Shift+P` → "Toggle Preview Scroll Sync (to ON)" or "Toggle Preview Scroll Sync (to OFF)"
 - **KNOWN LIMITATION**: Menu item does NOT appear in webview "More Actions" (three dots) menu - this is a VS Code API limitation with certain webview implementations
 - Activation event: `onStartupFinished` - extension loads after VS Code startup
 - Configuration access: `vscode.workspace.getConfiguration(null)` to avoid resource scoped warnings

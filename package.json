@@ -1,6 +1,6 @@
 {
-    "name": "toggle-scroll-sync",
-    "displayName": "Toggle Scroll Sync",
+    "name": "toggle-preview-scroll-sync",
+    "displayName": "Toggle Preview Scroll Sync",
     "version": "1.0.0",
     "engines": {
       "vscode": "^1.80.0"
