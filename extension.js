@@ -29,14 +29,21 @@ function updateContextForActiveEditor() {
         console.log(`[ToggleScrollSync]   Global value: ${settingValue?.globalValue}`);
         console.log(`[ToggleScrollSync]   Effective value: ${isEnabled}`);
     } else if (langId === 'markdown') {
+        // Check both possible Markdown scroll sync settings
+        const scrollEditorWithPreview = config.get('markdown.preview.scrollEditorWithPreview', true);
+        const scrollPreviewWithEditor = config.get('markdown.preview.scrollPreviewWithEditor', true);
+        
         settingName = 'markdown.preview.scrollEditorWithPreview';
         settingValue = config.inspect(settingName);
-        isEnabled = config.get(settingName, true);
+        isEnabled = scrollEditorWithPreview;
+        
         console.log(`[ToggleScrollSync] Markdown file detected`);
         console.log(`[ToggleScrollSync]   Setting: ${settingName}`);
         console.log(`[ToggleScrollSync]   Workspace value: ${settingValue?.workspaceValue}`);
         console.log(`[ToggleScrollSync]   Global value: ${settingValue?.globalValue}`);
         console.log(`[ToggleScrollSync]   Effective value: ${isEnabled}`);
+        console.log(`[ToggleScrollSync]   scrollEditorWithPreview: ${scrollEditorWithPreview}`);
+        console.log(`[ToggleScrollSync]   scrollPreviewWithEditor: ${scrollPreviewWithEditor}`);
     } else {
         console.log(`[ToggleScrollSync] Unsupported language: ${langId}, hiding commands`);
     }
@@ -60,11 +67,17 @@ function activate(context) {
             await config.update('html.preview.scrollEditorWithPreview', true, vscode.ConfigurationTarget.Workspace);
             console.log('[ToggleScrollSync] Setting markdown.preview.scrollEditorWithPreview to true');
             await config.update('markdown.preview.scrollEditorWithPreview', true, vscode.ConfigurationTarget.Workspace);
+            console.log('[ToggleScrollSync] Setting markdown.preview.scrollPreviewWithEditor to true');
+            await config.update('markdown.preview.scrollPreviewWithEditor', true, vscode.ConfigurationTarget.Workspace);
 
             // Force refresh Markdown preview to apply changes
             console.log('[ToggleScrollSync] Refreshing Markdown preview...');
-            await vscode.commands.executeCommand('markdown.extension.refreshPreview');
-            await vscode.commands.executeCommand('markdown.preview.refresh');
+            try {
+                await vscode.commands.executeCommand('markdown.preview.refresh');
+            } catch (refreshError) {
+                console.log('[ToggleScrollSync] Preview refresh command not available or failed:', refreshError);
+                // This is OK - the preview might not be open or the command might not exist
+            }
 
             // Update context to show/hide appropriate commands
             // Delay context update to avoid Command Palette auto-executing the next command
@@ -94,11 +107,17 @@ function activate(context) {
             await config.update('html.preview.scrollEditorWithPreview', false, vscode.ConfigurationTarget.Workspace);
             console.log('[ToggleScrollSync] Setting markdown.preview.scrollEditorWithPreview to false');
             await config.update('markdown.preview.scrollEditorWithPreview', false, vscode.ConfigurationTarget.Workspace);
+            console.log('[ToggleScrollSync] Setting markdown.preview.scrollPreviewWithEditor to false');
+            await config.update('markdown.preview.scrollPreviewWithEditor', false, vscode.ConfigurationTarget.Workspace);
 
             // Force refresh Markdown preview to apply changes
             console.log('[ToggleScrollSync] Refreshing Markdown preview...');
-            await vscode.commands.executeCommand('markdown.extension.refreshPreview');
-            await vscode.commands.executeCommand('markdown.preview.refresh');
+            try {
+                await vscode.commands.executeCommand('markdown.preview.refresh');
+            } catch (refreshError) {
+                console.log('[ToggleScrollSync] Preview refresh command not available or failed:', refreshError);
+                // This is OK - the preview might not be open or the command might not exist
+            }
 
             // Update context to show/hide appropriate commands
             // Delay context update to avoid Command Palette auto-executing the next command
