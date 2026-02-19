@@ -36,7 +36,8 @@
         {
           "command": "toggleScrollSync.toggle",
           "when": "resourceLangId == markdown || resourceLangId == html",
-          "group": "1_modification"
+          "group": "1_modification",
+          "checked": "toggleScrollSync.enabled"
         }
       ]
     }
