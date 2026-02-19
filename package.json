@@ -1,0 +1,59 @@
+{
+    "name": "toggle-scroll-sync",
+    "displayName": "Toggle Scroll Sync",
+    "version": "1.0.0",
+    "engines": {
+      "vscode": "^1.80.0"
+    },
+    "activationEvents": [
+      "onStartupFinished"
+    ],
+    "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "toggleScrollSync.toggle",
+        "title": "Toggle Scroll Sync",
+        "category": "Preview"
+      },
+      {
+        "command": "toggleScrollSync.enable",
+        "title": "✓ Enable Scroll Sync",
+        "category": "Preview"
+      },
+      {
+        "command": "toggleScrollSync.disable",
+        "title": "  Disable Scroll Sync",
+        "category": "Preview"
+      }
+    ],
+    "menus": {
+      "webview/title": [
+        {
+          "command": "toggleScrollSync.enable",
+          "when": "!toggleScrollSync.enabled",
+          "group": "navigation"
+        },
+        {
+          "command": "toggleScrollSync.disable",
+          "when": "toggleScrollSync.enabled",
+          "group": "navigation"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "toggleScrollSync.toggle",
+          "when": "true"
+        },
+        {
+          "command": "toggleScrollSync.enable",
+          "when": "!toggleScrollSync.enabled"
+        },
+        {
+          "command": "toggleScrollSync.disable",
+          "when": "toggleScrollSync.enabled"
+        }
+      ]
+    }
+  }
+  }

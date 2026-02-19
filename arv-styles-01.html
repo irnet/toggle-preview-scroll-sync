@@ -1,0 +1,1666 @@
+<!DOCTYPE HTML Public "" -//W3C//DTD HTML 4.01 Transitional//EN"">
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="format-detection" content="telephone=no">
+</head>
+
+<body
+    style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;background-color: #EBF3FF;">
+    <style type="text/css">
+        html,
+        body {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            /*background-color: #7FA4BF;	*/
+            background-color: #EBF3FF;
+        }
+
+        .split_old_msg_from_new {}
+
+        /*approval email Approve button*/
+        .approval_table_td_accept_email {
+            display: run-in;
+            text-align: center;
+            width: 100pt;
+            /*border:1px #83B0EC solid;*/
+            border: 1px green solid;
+            vertical-align: middle;
+            font-weight: bold;
+            font-family: "Times New Roman", "times", "serif", "georgia";
+            valign: top;
+            nowrap: nowrap;
+            background-color: green;
+        }
+
+        /*approval email Approve button link*/
+        /*	<a style="color: #EBF3FF; text-decoration: none; font-weight: bold;"> this must be mentionned in html itself*/
+        .approval_table_td_reject_email {
+            display: run-in;
+            text-align: center;
+            width: 100pt;
+            /*border:1px #83B0EC solid;*/
+            border: 1px red solid;
+            vertical-align: middle;
+            font-weight: bold;
+            font-family: "Times New Roman", "times", "serif", "georgia";
+            valign: top;
+            nowrap: nowrap;
+            background-color: red;
+        }
+
+        /*approval email Reject button link*/
+        /*	<a style="color: #EBF3FF; text-decoration: none; font-weight: bold;"> this must be mentionned in html itself*/
+
+        /*
+    ==========================
+    START of block for HTML editor
+    ==========================
+    */
+        p,
+        .tinymce_rtf p,
+        .normal_text,
+        .tinymce_rtf .normal_text {
+            margin: 0px 0px 4pt 0px;
+            font-size: 12pt;
+            font-family: "Times New Roman", "times", "serif", "georgia";
+            color: black;
+            font-stretch: normal;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            line-height: 100%;
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        .title,
+        .tinymce_rtf .title {
+            margin: 0px;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            page-break-after: avoid;
+            font-size: 24.0pt;
+            font-family: "Times New Roman", "times", "serif", "georgia";
+            color: black;
+        }
+
+        .subtitle,
+        .tinymce_rtf .subtitle {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 12pt;
+            margin-left: 0px;
+            line-height: 115%;
+            page-break-after: avoid;
+            font-size: 14.0pt;
+            font-family: "Times New Roman", "times", "serif", "georgia";
+            color: #666666;
+            font-style: italic;
+        }
+
+        h1,
+        .tinymce_rtf h1 {
+            margin-top: 18.0pt;
+            margin-right: 0px;
+            margin-bottom: 6pt;
+            margin-left: 0px;
+            line-height: 115%;
+            page-break-after: avoid;
+            font-size: 18.0pt;
+            font-family: "Times New Roman", "times", "serif", "georgia";
+            color: black;
+            font-weight: normal;
+        }
+
+        h2,
+        .tinymce_rtf h2 {
+            margin-top: 16.0pt;
+            margin-right: 0px;
+            margin-bottom: 6pt;
+            margin-left: 0px;
+            line-height: 115%;
+            page-break-after: avoid;
+            font-size: 16.0pt;
+            font-family: "Times New Roman", "times", "serif", "georgia";
+            color: black;
+            font-weight: normal;
+        }
+
+        h3,
+        .tinymce_rtf h3 {
+            margin-top: 14.0pt;
+            margin-right: 0px;
+            margin-bottom: 10pt;
+            margin-left: 0px;
+            line-height: 115%;
+            page-break-after: avoid;
+            font-size: 14.0pt;
+            font-family: "Times New Roman", "times", "serif", "georgia";
+            color: #666666;
+            font-weight: normal;
+        }
+
+        .tinymce_rtf ul,
+        .tinymce_rtf li,
+        .tinymce_rtf ol,
+        .tinymce_rtf div,
+        .tinymce_rtf div.mainbody_end_user,
+        .tinymce_rtf p.mainbody_end_user,
+        .tinymce_rtf li.mainbody_end_user,
+        .tinymce_rtf p.MsoNormal,
+        .tinymce_rtf .MsoNormal,
+        .tinymce_rtf li.MsoNormal,
+        .tinymce_rtf div.MsoNormal,
+        .tinymce_rtf .MsoNormalTable {
+            font-size: 12pt;
+            font-family: "Times New Roman", "times", "serif", "georgia";
+            color: black;
+            font-stretch: normal;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            line-height: 100%;
+            margin-top: 0pt;
+            margin-bottom: 6pt;
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        .tinymce_rtf ul {
+            margin-left: 12pt;
+        }
+
+        /*
+    ==========================
+    END of block for HTML editor
+    ==========================
+    */
+        .mainbody_end_user {
+            font-family: "Times New Roman", "times", "serif", "georgia";
+            font-size: 12pt;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        .mainbody_end_user,
+        table {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        /*
+    .mainbody_end_user > table > tbody > tr > td {
+        background-color: #EBF3FF;
+    } */
+
+        ul,
+        li,
+        div,
+        div.mainbody_end_user,
+        p.mainbody_end_user,
+        li.mainbody_end_user,
+        p.MsoNormal,
+        .MsoNormal,
+        li.MsoNormal,
+        div.MsoNormal,
+        .MsoNormalTable {
+            font-size: 1rem;
+            font-family: "Times New Roman", "times", "serif", "georgia";
+            color: black;
+            font-stretch: normal;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            line-height: 100%;
+            margin-top: 0pt;
+            margin-bottom: 4pt;
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        ul {
+            margin-left: 12pt;
+        }
+
+        .hello_end_user {}
+
+        .hello_person_name {}
+
+        .sc_type_end_user {
+            /*    font-size: 12pt;
+        font-weight: bold;
+        text-decoration: underline;
+    */
+        }
+
+        .sc_info_block_end_user {}
+
+        /*.sc_info_label_end_user{
+        font-weight: bold;
+        padding-bottom: 8pt;
+    }*/
+        .field_label_plaintext_strong {
+            font-weight: bold !important;
+        }
+
+        .field_label_plaintext {
+            font-weight: normal;
+        }
+
+        .field_label_rtf,
+        .field_label {
+            font-weight: bold !important;
+            /*padding: 0pt 0pt 8pt 0pt;*/
+        }
+
+        .field_value_rtf_active {
+            border: solid #B5C4DF 0.1em;
+            background-color: white;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .field_value_rtf_active>tbody>tr>td {
+            padding: 8pt !important;
+            overflow: hidden !important;
+            /* otherwise numbering created by outlook is shown outside of the box */
+        }
+
+        .field_value_rtf_active .field_value_rtf_active__td,
+        .field_value_rtf_active .field_value_rtf_passive__td .field_value_rtf_passive .field_value_rtf_active__td,
+        .field_value_rtf_passive .field_value_rtf_passive__td {
+            padding: 0;
+            margin: 0;
+        }
+
+        .field_value_rtf_passive {
+            /*border-color: #c5c5c5;*/
+            border: solid #B5C4DF 0.1em;
+            width: 100%;
+            margin-top: 5px;
+            overflow: hidden !important;
+            /* otherwise numbering created by outlook is shown outside of the box */
+        }
+
+        .field_value_rtf_passive>tbody>tr>td {
+            padding: 8pt !important;
+        }
+
+        /*request number. NB: OWA email list skip font-weight: bold, it react to <strong> only  */
+        .request_id {
+            color: inherit;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: default;
+        }
+
+        /*imgages inside rtf must be within width defined by email top div\table */
+        /* checked works without @media, doesn't work with @media on android */
+        /*@media only screen and (max-width: 480px) {
+    @media all{ 
+    }*/
+        .field_value_rtf_active img,
+        .field_value_rtf_passive img {
+            /* 100% - mobile fits to screen: big images shrink to screen size; outlook shows full size image, <table> become wider than indicated 360pt;*/
+            /* 342pt (presize indication) - mobile shrink image to 342pt, not to screen size; outlook shows same as 100% */
+            /* we leave 100% because we can zoom images in mobile but we read lisable text; outlook shows "changed", wider design but allows to watch pics without zooming */
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+
+        .field_field_value_plaintext_active {}
+
+        .field_field_value_plaintext_passive {}
+
+        .tinymce_rtf {}
+
+        .sc_info_field_block_end_user {}
+
+        .sc_info_field_label_end_user {
+            font-weight: bold;
+        }
+
+        .field_value_single_str_end_user {}
+
+        .field_value_multi_str_end_user {
+            font-style: italic;
+        }
+
+        .sc_rules_block {
+            display: none;
+        }
+
+        #appl {
+            width: 160mm
+        }
+
+        #outlook a {
+            padding: 0;
+        }
+
+        /* disable automatic conversion of numbers to links in mobile email clients*/
+        a {
+            color: inherit;
+            text-decoration: none;
+            cursor: default;
+        }
+
+        /* enable automatic conversion of numbers to links in mobile email clients in special blocks*/
+        .allow_to_convert_numbers_to_links_in_mobile a,
+        a.allow_to_convert_numbers_to_links_in_mobile {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <div>
+        Ниже еще одна версия дизайна.</br>
+         Это - эксперимент в отличеие от того, что ночью отправил Андрею Леонидовичу.
+
+    </div>
+    <table width="100%" cellspacing="0"
+        style="border-left:none;border-right:none;border-bottom:none;border-top:solid #B5C4DF 2.0pt;padding:3.0pt 0cm 0cm 0cm">
+        <tr style="border:none;">
+            <td style="padding:0pt 0pt 0pt 0pt; border:none;"></td>
+        </tr>
+    </table>    
+    <div class="mainbody_end_user"
+        style="font-size: 12pt; font-family: 'Times New Roman', times, serif, georgia; color:black; font-stretch: normal; font-style: normal; font-variant: normal; font-weight: normal; line-height: 100%; margin-top: 0pt; margin-bottom: 6pt; padding-top: 0pt; padding-bottom: 0pt; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <table border=0 cellspacing=0 cellpadding=0 width="100%"
+            style="width:100%;border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt: 0cm 0cm 0cm 0cm;">
+            <tr>
+                <td></td>
+                <td width="360pt" valign=top style='width:360pt;padding:8pt;background-color: EBF3FF;'><br><span>Рунов
+                        Илья Михайлович, </span><br><br>Требуется ваше согласование по&#160;запросу <span
+                        class="request_id"
+                        style="color: inherit;font-weight: bold;text-decoration:none;cursor: default;">ARQ-027018</span>,
+                    который связан с&#160;заданием WO-0153123, единым обращением <span class="request_id"
+                        style="color: inherit;font-weight: bold;text-decoration:none;cursor: default;">SC-0312704</span>.
+                    <div>
+                        <table style="border:none;" width="100%" cellspacing="0" style="border:none;">
+                            <tr style="border:none;">
+                                <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                    <table align="left" cellspacing="0" style="font-weight: bold;">
+                                        <tr>
+                                            <td style="padding: 0pt 0pt 0pt 0pt; border:none;">Тема согласования:</td>
+                                        </tr>
+                                    </table>
+                                    <table align="left" style="border:none;" cellspacing="2">
+                                        <tr style="border:none;">
+                                            <td style="border:none;"> </td>
+                                        </tr>
+                                    </table>
+                                    <table align="left" cellpadding="0" cellspacing="0"
+                                        class="field_field_value_plaintext_passive">
+                                        <tr>
+                                            <td>Медиаканал в социальных сетях РИА. Единое – Cогласование с Владельцем
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div><br>
+                    <div>
+                        <table style="border:none;" width="100%" cellspacing="0" style="border:none;">
+                            <tr style="border:none;">
+                                <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                    <table align="left" cellspacing="0" class="field_label_rtf"
+                                        style="font-weight: bold;">
+                                        <tr>
+                                            <td style="padding: 0pt 0pt 0pt 0pt; border:none;">Предмет согласования:
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr style="border:none;">
+                                <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                    <table align="left" cellpadding="0" cellspacing="0" class="field_value_rtf_active"
+                                        style="border: solid #B5C4DF 0.1em;background-color: white;width: 100%;margin-top: 5px;min-width:35em;padding: 0.75em;">
+                                        <tr>
+                                            <td class="field_value_rtf_active__td"
+                                                style="padding: 8pt;overflow: hidden;">
+                                                <table width="100%" cellspacing="0"
+                                                    style="border:none;border:none; padding-bottom:0.125em;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Прошу согласовать доступ к медиаканалам для:
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td
+                                                                        style="font-size: 1.06em; font-weight: bold; color: red;">
+                                                                        Рунов Илья Михайлович</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table><br>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Заявитель в основном обращении: </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>Рунов Илья Михайлович, 4444</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table><br>
+                                                <table width="100%" cellspacing="0"
+                                                    style="border:none;padding-top:0.06em; ">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;font-size: 1.125em;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Наименование медиаканала:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0"
+                                                                style="font-weight: bold; font-size: 1.125em; color:darkblue">
+                                                                <tr>
+                                                                    <td>RIA Rsport</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" cellspacing="0"
+                                                    style="border:none;border:none;padding: 0.25em 0em 0.5em 0em;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;font-size: 1.125em;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Ссылка на медиканал:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0"
+                                                                style="font-size: 1.125em; font-weight: bold;">
+                                                                <tr>
+                                                                    <td>max.ru/sportrian</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Уровень доступа:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0"
+                                                                style="font-weight: bold; color:rgb(2, 97, 2)">
+                                                                <tr>
+                                                                    <td>Администратор</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Имя в социальной сети:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>max</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Аккаунт в социальной cети:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>03-test-max</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Основной телефон:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>4444</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Мобильный телефон:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>+71324567898</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Адрес электронной почты:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>7132456789@dfgdfg.dfgdf</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0.05em 0.05em 0.05em 0em; margin:0; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0; border:none;">Действует до:
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>26.11.2026</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table><br>
+                                                <table width="100%" cellspacing="0"
+                                                    style="border:none;padding-top:0.06em; ">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;font-size: 1.125em;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Наименование медиаканала:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0"
+                                                                style="font-weight: bold; font-size: 1.125em; color:darkblue">
+                                                                <tr>
+                                                                    <td>Sputnik</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" cellspacing="0"
+                                                    style="border:none;border:none;padding: 0.25em 0em 0.5em 0em;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;font-size: 1.125em;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Ссылка на медиканал:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0"
+                                                                style="font-size: 1.125em; font-weight: bold;">
+                                                                <tr>
+                                                                    <td>https://t.me/sputniknewsint</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Уровень доступа:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0"
+                                                                style="font-weight: bold; color:rgb(2, 97, 2)">
+                                                                <tr>
+                                                                    <td>Администратор</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Имя в социальной сети:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>someperson</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Аккаунт в социальной cети:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>02-someperson</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Основной телефон:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>4444</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Мобильный телефон:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>+79991234567</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Адрес электронной почты:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>someemail@company.com</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0.05em 0.05em 0.05em 0em; margin:0; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0; border:none;">Действует до:
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>26.11.2027</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table><br>
+                                                <table width="100%" cellspacing="0"
+                                                    style="border:none;padding-top:0.06em; ">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;font-size: 1.125em;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Наименование медиаканала:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0"
+                                                                style="font-weight: bold; font-size: 1.125em; color:darkblue">
+                                                                <tr>
+                                                                    <td>inosmi</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" cellspacing="0"
+                                                    style="border:none;border:none;padding: 0.25em 0em 0.5em 0em;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;font-size: 1.125em;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Ссылка на медиканал:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0"
+                                                                style="font-size: 1.125em; font-weight: bold;">
+                                                                <tr>
+                                                                    <td>max.ru/inosmi</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Уровень доступа:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0"
+                                                                style="font-weight: bold; color:rgb(2, 97, 2)">
+                                                                <tr>
+                                                                    <td>Администратор</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Имя в социальной сети:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>max</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Аккаунт в социальной cети:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>01-test-max</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Основной телефон:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>4444</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Мобильный телефон:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>+79996547896</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0pt 0pt 0pt 0pt; border:none;">
+                                                                        Адрес электронной почты:</td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>79996547896@comp.com</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table style="border:none;" width="100%" cellspacing="0"
+                                                    style="border:none;">
+                                                    <tr style="border:none;">
+                                                        <td
+                                                            style="padding:0.05em 0.05em 0.05em 0em; margin:0; border:none;">
+                                                            <table align="left" cellspacing="0"
+                                                                class="field_label_plaintext"
+                                                                style="font-weight: normal;">
+                                                                <tr>
+                                                                    <td style="padding: 0; border:none;">Действует до:
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" style="border:none;" cellspacing="2">
+                                                                <tr style="border:none;">
+                                                                    <td style="border:none;"> </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table align="left" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>28.11.2028</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div><br>
+                    <div>Вы можете согласовать по E-mail, нажав ответ и отправив сформировавшееся письмо. Если нажмете
+                        Отклонить, обязательно напишите в письме, почему.</div><br><br>
+                    <table style="border:none;" width="100%" cellspacing="0" style="border:none;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:0;margin:0;border:none;">
+                                    <table align="left" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr style='height:2em;'>
+                                                <td valign=center align=center
+                                                    style="width:7em;color: #0000cc;background:#00ff00;border:0.1em #00ff00 solid;padding:0.2em;height:1.4em;box-shadow: .2em 0.2em 0.3em #81adee;border-radius: 0.2em;">
+                                                    <a style="text-decoration:none;cursor:pointer;color: #0000cc !important;background:#00ff00  !important;font-weight:bold;"
+                                                        href="mailto:servicedesk@rian.ru?subject=ARV-044475%20ApprovalVoteResult=Approved%20для%20Рунов%20Илья%20Михайлович&amp;body=%20%0d%0a%0d%0a%20--------------------------------------%0d%0a%20Напишите%20комментарий%20при%20необходимости%0d%0a%20и%20отправьте%20письмо.">Согласовать</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table align="left" style="border:none; margin-left:10pt;" cellspacing="2">
+                                        <tbody>
+                                            <tr style="height:2em;border:none;">
+                                                <td
+                                                    style="color: transparent;background:transparent;border-top:0.1em transparent solid;border-bottom:0.1em transparent solid;height:1.4em;padding:0.2em 0 0.2em 0;">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table align="left" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr style='height:2em'>
+                                                <td valign=center align=center
+                                                    style="width:7em;color: #0000cc;background:#ff8080;border:0.1em #ff8080 solid;padding:0.2em;height:1.4em;box-shadow: .2em 0.2em 0.3em #81adee;border-radius: 0.2em;">
+                                                    <a style="text-decoration:none;cursor:pointer;color: #0000cc !important;background:#ff8080 !important;font-weight:bold;"
+                                                        href="mailto:servicedesk@rian.ru?subject=ARV-044475%20ApprovalVoteResult=Rejected%20для%20Рунов%20Илья%20Михайлович&amp;body=%20%0d%0a%0d%0a%20--------------------------------------%0d%0a%20Обязательно%20напишите%20комментарий,%20почему%0d%0a%20отклоняете,%20и%20отправьте%20письмо.">Отклонить</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table><br />
+                    <table style="border:none;" width="100padding-bottom: .5em;%" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                <table align="left" cellspacing="0" class="field_label_plaintext"
+                                    style="font-weight: bold;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;">Заказчик согласования:</td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none;" cellspacing="2">
+                                    <tr style="border:none;">
+                                        <td style="border:none;"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>Рунов Илья Михайлович</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                <table align="left" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>Ведущий эксперт</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                <table align="left" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>Дирекция информационных технологий<br>Отдел сопровождения информационных
+                                            систем</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                <table align="left" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>4444, i.runov@ria.ru</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table><br />
+                    <table style="border:none;" width="100%" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                <table align="left" cellspacing="0" class="field_label_plaintext"
+                                    style="font-weight: bold;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;">Инициатор согласования:</td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none;" cellspacing="2">
+                                    <tr style="border:none;">
+                                        <td style="border:none;"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>Битюцкий Евгений Анатольевич</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                <table align="left" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>Заместитель начальника отдела</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                <table align="left" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>Дирекция информационных технологий<br>Отдел сопровождения информационных
+                                            систем</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                <table align="left" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>7689, e.bityutskiy@ria.ru</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table><br><br><br>
+                    <table width="100%" cellspacing="0"
+                        style="border-left:none;border-right:none;border-bottom:none;border-top:solid #B5C4DF 2.0pt;padding:3.0pt 0cm 0cm 0cm">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; border:none;"></td>
+                        </tr>
+                    </table><br>Согласование связано с заданием <span class="request_id"
+                        style="color: inherit;font-weight: bold;text-decoration:none;cursor: default;">WO-0153123</span><br><br>
+                    <table style="border:none;" width="100%" cellpadding="0" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;"
+                                valign="baseline">
+                                <table align="left" cellpadding="0" cellspacing="0" class="field_label_plaintext_strong"
+                                    style="margin: 0 0.5em 0 0; padding:0;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;" valign="baseline">Инициатор:
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none; border-spacing: 1em 0; margin:0; padding:0;"
+                                    cellpadding="0" cellspacing="0">
+                                    <tr style="border:none; margin:0; padding:0;">
+                                        <td style="border:none; margin:0; padding:0;" valign="top"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0" style="margin:0; padding:0;">
+                                    <tr>
+                                        <td valign="baseline">Рунов Илья Михайлович</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellpadding="0" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;"
+                                valign="baseline">
+                                <table align="left" cellpadding="0" cellspacing="0" class="field_label_plaintext"
+                                    style="margin: 0 0.5em 0 0; padding:0;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;" valign="baseline">Основной
+                                            телефон:</td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none; border-spacing: 1em 0; margin:0; padding:0;"
+                                    cellpadding="0" cellspacing="0">
+                                    <tr style="border:none; margin:0; padding:0;">
+                                        <td style="border:none; margin:0; padding:0;" valign="top"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0"
+                                    class="allow_to_convert_numbers_to_links_in_mobile" style="margin:0; padding:0;">
+                                    <tr>
+                                        <td valign="baseline">4444</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellpadding="0" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;"
+                                valign="baseline">
+                                <table align="left" cellpadding="0" cellspacing="0" class="field_label_plaintext"
+                                    style="margin: 0 0.5em 0 0; padding:0;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;" valign="baseline">Адрес
+                                            электронной почты:</td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none; border-spacing: 1em 0; margin:0; padding:0;"
+                                    cellpadding="0" cellspacing="0">
+                                    <tr style="border:none; margin:0; padding:0;">
+                                        <td style="border:none; margin:0; padding:0;" valign="top"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0"
+                                    class="allow_to_convert_numbers_to_links_in_mobile" style="margin:0; padding:0;">
+                                    <tr>
+                                        <td valign="baseline">i.runov@ria.ru</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellpadding="0" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;"
+                                valign="baseline">
+                                <table align="left" cellpadding="0" cellspacing="0" class="field_label_plaintext"
+                                    style="margin: 0 0.5em 0 0; padding:0;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;" valign="baseline">Рабочая
+                                            группа:</td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none; border-spacing: 1em 0; margin:0; padding:0;"
+                                    cellpadding="0" cellspacing="0">
+                                    <tr style="border:none; margin:0; padding:0;">
+                                        <td style="border:none; margin:0; padding:0;" valign="top"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0" style="margin:0; padding:0;">
+                                    <tr>
+                                        <td valign="baseline">Администраторы СервисДеск</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellpadding="0" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;"
+                                valign="baseline">
+                                <table align="left" cellpadding="0" cellspacing="0" class="field_label_plaintext"
+                                    style="margin: 0 0.5em 0 0; padding:0;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;" valign="baseline">Специалист:
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none; border-spacing: 1em 0; margin:0; padding:0;"
+                                    cellpadding="0" cellspacing="0">
+                                    <tr style="border:none; margin:0; padding:0;">
+                                        <td style="border:none; margin:0; padding:0;" valign="top"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0" style="margin:0; padding:0;">
+                                    <tr>
+                                        <td valign="baseline">Битюцкий Евгений Анатольевич</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellpadding="0" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;"
+                                valign="baseline">
+                                <table align="left" cellpadding="0" cellspacing="0" class="field_label_plaintext"
+                                    style="margin: 0 0.5em 0 0; padding:0;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;" valign="baseline">Основной
+                                            телефон:</td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none; border-spacing: 1em 0; margin:0; padding:0;"
+                                    cellpadding="0" cellspacing="0">
+                                    <tr style="border:none; margin:0; padding:0;">
+                                        <td style="border:none; margin:0; padding:0;" valign="top"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0"
+                                    class="allow_to_convert_numbers_to_links_in_mobile" style="margin:0; padding:0;">
+                                    <tr>
+                                        <td valign="baseline">7689</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellpadding="0" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;"
+                                valign="baseline">
+                                <table align="left" cellpadding="0" cellspacing="0" class="field_label_plaintext"
+                                    style="margin: 0 0.5em 0 0; padding:0;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;" valign="baseline">Адрес
+                                            электронной почты:</td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none; border-spacing: 1em 0; margin:0; padding:0;"
+                                    cellpadding="0" cellspacing="0">
+                                    <tr style="border:none; margin:0; padding:0;">
+                                        <td style="border:none; margin:0; padding:0;" valign="top"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0"
+                                    class="allow_to_convert_numbers_to_links_in_mobile" style="margin:0; padding:0;">
+                                    <tr>
+                                        <td valign="baseline">e.bityutskiy@ria.ru</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table><br><br><br>
+                    <table width="100%" cellspacing="0"
+                        style="border-left:none;border-right:none;border-bottom:none;border-top:solid #B5C4DF 2.0pt;padding:3.0pt 0cm 0cm 0cm">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; border:none;"></td>
+                        </tr>
+                    </table><br>Согласование связано с обращением <span class="request_id"
+                        style="color: inherit;font-weight: bold;text-decoration:none;cursor: default;">SC-0312704</span><br><br>
+                    <table style="border:none;" width="100%" cellpadding="0" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;"
+                                valign="baseline">
+                                <table align="left" cellpadding="0" cellspacing="0" class="field_label_plaintext_strong"
+                                    style="margin: 0 0.5em 0 0; padding:0;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;" valign="baseline">Заявитель:
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none; border-spacing: 1em 0; margin:0; padding:0;"
+                                    cellpadding="0" cellspacing="0">
+                                    <tr style="border:none; margin:0; padding:0;">
+                                        <td style="border:none; margin:0; padding:0;" valign="top"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0" style="margin:0; padding:0;">
+                                    <tr>
+                                        <td valign="baseline">Рунов Илья Михайлович</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellpadding="0" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;"
+                                valign="baseline">
+                                <table align="left" cellpadding="0" cellspacing="0" class="field_label_plaintext"
+                                    style="margin: 0 0.5em 0 0; padding:0;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;" valign="baseline">Основной
+                                            телефон:</td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none; border-spacing: 1em 0; margin:0; padding:0;"
+                                    cellpadding="0" cellspacing="0">
+                                    <tr style="border:none; margin:0; padding:0;">
+                                        <td style="border:none; margin:0; padding:0;" valign="top"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0"
+                                    class="allow_to_convert_numbers_to_links_in_mobile" style="margin:0; padding:0;">
+                                    <tr>
+                                        <td valign="baseline">4444</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="border:none;" width="100%" cellpadding="0" cellspacing="0" style="border:none;">
+                        <tr style="border:none;">
+                            <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;"
+                                valign="baseline">
+                                <table align="left" cellpadding="0" cellspacing="0" class="field_label_plaintext"
+                                    style="margin: 0 0.5em 0 0; padding:0;">
+                                    <tr>
+                                        <td style="padding: 0pt 0pt 0pt 0pt; border:none;" valign="baseline">Адрес
+                                            электронной почты:</td>
+                                    </tr>
+                                </table>
+                                <table align="left" style="border:none; border-spacing: 1em 0; margin:0; padding:0;"
+                                    cellpadding="0" cellspacing="0">
+                                    <tr style="border:none; margin:0; padding:0;">
+                                        <td style="border:none; margin:0; padding:0;" valign="top"> </td>
+                                    </tr>
+                                </table>
+                                <table align="left" cellpadding="0" cellspacing="0"
+                                    class="allow_to_convert_numbers_to_links_in_mobile" style="margin:0; padding:0;">
+                                    <tr>
+                                        <td valign="baseline">i.runov@ria.ru</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table><br>
+                    <div>
+                        <table style="border:none;" width="100%" cellspacing="0" style="border:none;">
+                            <tr style="border:none;">
+                                <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                    <table align="left" cellspacing="0" class="field_label_rtf"
+                                        style="font-weight: bold;">
+                                        <tr>
+                                            <td style="padding: 0pt 0pt 0pt 0pt; border:none;">Информация от заявителя:
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr style="border:none;">
+                                <td style="padding:0pt 0pt 0pt 0pt; margin: 0pt 0pt 0pt 0pt; border:none;">
+                                    <table align="left" cellpadding="0" cellspacing="0" class="field_value_rtf_passive"
+                                        style="border: solid #B5C4DF 0.1em;width: 100%;margin-top: 0.4em;overflow: hidden;">
+                                        <tr>
+                                            <td class="field_value_rtf_passive__td" style="padding: 0.6em">
+                                                <p>тест</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div><br>
+    </div>
+    </td>
+    <td></td>
+    </tr>
+    </table>
+    </div>
+</body>
+
+</html>
