@@ -14,44 +14,29 @@
       {
         "command": "toggleScrollSync.toggle",
         "title": "Toggle Scroll Sync",
-        "category": "Preview"
-      },
-      {
-        "command": "toggleScrollSync.enable",
-        "title": "✓ Enable Scroll Sync",
-        "category": "Preview"
-      },
-      {
-        "command": "toggleScrollSync.disable",
-        "title": "  Disable Scroll Sync",
-        "category": "Preview"
+        "category": "Preview",
+        "icon": "$(sync)"
       }
     ],
     "menus": {
-      "webview/title": [
-        {
-          "command": "toggleScrollSync.enable",
-          "when": "!toggleScrollSync.enabled",
-          "group": "navigation"
-        },
-        {
-          "command": "toggleScrollSync.disable",
-          "when": "toggleScrollSync.enabled",
-          "group": "navigation"
-        }
-      ],
       "commandPalette": [
         {
           "command": "toggleScrollSync.toggle",
           "when": "true"
-        },
+        }
+      ],
+      "editor/title": [
         {
-          "command": "toggleScrollSync.enable",
-          "when": "!toggleScrollSync.enabled"
-        },
+          "command": "toggleScrollSync.toggle",
+          "when": "resourceLangId == markdown || resourceLangId == html",
+          "group": "navigation"
+        }
+      ],
+      "editor/title/context": [
         {
-          "command": "toggleScrollSync.disable",
-          "when": "toggleScrollSync.enabled"
+          "command": "toggleScrollSync.toggle",
+          "when": "resourceLangId == markdown || resourceLangId == html",
+          "group": "1_modification"
         }
       ]
     }

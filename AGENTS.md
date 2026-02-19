@@ -3,7 +3,7 @@
 This file provides guidance to agents when working with code in this repository.
 
 ## Project Overview
-Minimal VS Code extension that adds "Toggle Scroll Sync" command to webview title menus for HTML/Markdown preview panels.
+Minimal VS Code extension that adds "Toggle Scroll Sync" command to toggle scroll synchronization between editor and preview panels for HTML/Markdown files.
 
 ## Development Commands
 - **Install dependencies**: `npm install` (if adding dependencies)
@@ -15,9 +15,11 @@ Minimal VS Code extension that adds "Toggle Scroll Sync" command to webview titl
 - Extension uses **CommonJS** (require/module.exports), NOT ES modules
 - Settings are saved with `vscode.ConfigurationTarget.Workspace` - affects only current workspace, allowing different settings per project
 - Toggle logic inverts value: `newValue = !currentHtml`, then applies same value to all three settings
-- Status message shows inverted logic: "OFF" when `newValue` is true (because true = sync enabled = scroll sync ON)
-- Menu appears only in webviews matching regex `/.*preview.*/` or `/.*html.*/` (webview title menu)
-- No `activationEvents` defined - extension loads on startup (consider adding activation events for performance)
+- Status message: "ON" when `newValue` is true (sync enabled), "OFF" when `newValue` is false (sync disabled)
+- Command available in Command Palette: `Ctrl+Shift+P` → "Toggle Scroll Sync"
+- **KNOWN LIMITATION**: Menu item does NOT appear in webview "More Actions" (three dots) menu - this is a VS Code API limitation with certain webview implementations
+- Activation event: `onStartupFinished` - extension loads after VS Code startup
+- Configuration access: `vscode.workspace.getConfiguration(null)` to avoid resource scoped warnings
 
 ## Extension Settings Modified
 1. `html.preview.scrollPreviewWithEditor`
@@ -29,3 +31,8 @@ Minimal VS Code extension that adds "Toggle Scroll Sync" command to webview titl
 - Async/await for VS Code configuration updates
 - Command registration pattern: `vscode.commands.registerCommand()`
 - Always push commands to `context.subscriptions` for cleanup
+
+## Known Issues
+- Menu item does not appear in webview "More Actions" menu for some preview extensions (e.g., george-alisson.html-preview-vscode)
+- Command works reliably from Command Palette (`Ctrl+Shift+P`)
+- This is due to VS Code API limitations with third-party webview implementations

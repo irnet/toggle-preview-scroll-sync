@@ -29,9 +29,10 @@ This file provides guidance to agents when designing or planning changes to this
 
 #### Menu Placement
 - Location: `webview/title` (webview title bar menu)
-- When clause: `webviewId =~ /.*preview.*/ || webviewId =~ /.*html.*/`
 - Rationale: Targets only preview panels, not all webviews
-- Limitation: May not work with all HTML preview extensions if they use different webviewId patterns
+- **KNOWN LIMITATION**: Menu item does NOT appear in webview "More Actions" (three dots) menu for some preview extensions (e.g., george-alisson.html-preview-vscode)
+- Command works reliably from Command Palette: `Ctrl+Shift+P` → "Toggle Scroll Sync"
+- This is due to VS Code API limitations with third-party webview implementations
 
 #### No Activation Events
 - Extension loads on VS Code startup (no `activationEvents` defined)

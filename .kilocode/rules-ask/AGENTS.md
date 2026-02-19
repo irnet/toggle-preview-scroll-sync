@@ -29,5 +29,6 @@ The extension toggles three VS Code settings simultaneously:
 - Extension uses CommonJS (require/module.exports), not ES modules
 - No build process - pure JavaScript extension
 - Settings are workspace-specific (saved to `.vscode/settings.json`), allowing different settings per project
-- Menu only appears in webviews matching `/.*preview.*/` or `/.*html.*/` patterns
-- Status message shows inverted logic: "OFF" when sync is enabled (true)
+- **KNOWN LIMITATION**: Menu item does NOT appear in webview "More Actions" (three dots) menu for some preview extensions (e.g., george-alisson.html-preview-vscode)
+- Command works reliably from Command Palette: `Ctrl+Shift+P` → "Toggle Scroll Sync"
+- This is due to VS Code API limitations with third-party webview implementations

@@ -28,5 +28,7 @@ This file provides guidance to agents when debugging code in this repository.
 - Manually verify settings in `.vscode/settings.json` after toggling
 
 ### Common Issues
-- Menu not appearing: Check `webviewId` regex in `package.json` - may need adjustment for specific preview extensions
+- Menu not appearing in webview "More Actions" (three dots): This is a known VS Code API limitation with certain preview extensions (e.g., george-alisson.html-preview-vscode)
+- Command works reliably from Command Palette: `Ctrl+Shift+P` → "Toggle Scroll Sync"
 - Settings not changing: Ensure async/await is used for `config.update()` calls
+- Resource scoped warning: Use `vscode.workspace.getConfiguration(null)` to avoid warnings
