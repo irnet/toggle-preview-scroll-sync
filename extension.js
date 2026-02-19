@@ -156,10 +156,44 @@ function activate(context) {
     // Listen for active editor changes to update context
     const editorChangeListener = vscode.window.onDidChangeActiveTextEditor(() => {
         console.log('[ToggleScrollSync] === ACTIVE EDITOR CHANGED ===');
+        // Small delay to ensure VS Code has updated the UI
+        setTimeout(() => {
+            updateContextForActiveEditor();
+        }, 50);
+    });
+
+    // Listen for configuration changes to update context when settings change externally
+    const configChangeListener = vscode.workspace.onDidChangeConfiguration((event) => {
+        // Check if relevant settings changed
+        const relevantSettings = [
+            'html.preview.scrollPreviewWithEditor',
+            'html.preview.scrollEditorWithPreview',
+            'markdown.preview.scrollEditorWithPreview',
+            'markdown.preview.scrollPreviewWithEditor'
+        ];
+        
+        const settingsChanged = relevantSettings.some(setting =>
+            event.affectsConfiguration(setting)
+        );
+        
+        if (settingsChanged) {
+            console.log('[ToggleScrollSync] === CONFIGURATION CHANGED ===');
+            updateContextForActiveEditor();
+        }
+    });
+
+    // Listen for text document opening/closing to update context
+    const textDocumentOpenListener = vscode.workspace.onDidOpenTextDocument(() => {
+        console.log('[ToggleScrollSync] === TEXT DOCUMENT OPENED ===');
         updateContextForActiveEditor();
     });
 
-    context.subscriptions.push(editorChangeListener);
+    const textDocumentCloseListener = vscode.workspace.onDidCloseTextDocument(() => {
+        console.log('[ToggleScrollSync] === TEXT DOCUMENT CLOSED ===');
+        updateContextForActiveEditor();
+    });
+
+    context.subscriptions.push(editorChangeListener, configChangeListener, textDocumentOpenListener, textDocumentCloseListener);
 
     // Initialize context on activation based on current active editor
     console.log('[ToggleScrollSync] === INITIALIZING CONTEXT ===');

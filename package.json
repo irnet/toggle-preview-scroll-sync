@@ -1,7 +1,7 @@
 {
     "name": "toggle-preview-scroll-sync",
     "displayName": "Toggle Preview Scroll Sync",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "kurioterno",
     "license": "MIT",
     "engines": {
