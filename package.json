@@ -2,6 +2,8 @@
     "name": "toggle-preview-scroll-sync",
     "displayName": "Toggle Preview Scroll Sync",
     "version": "1.0.0",
+    "publisher": "kurioterno",
+    "license": "MIT",
     "engines": {
       "vscode": "^1.80.0"
     },
@@ -9,6 +11,10 @@
       "onStartupFinished"
     ],
     "main": "./extension.js",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/irnet/toggle-preview-scroll-sync.git"
+    },
   "contributes": {
     "commands": [
       {
@@ -38,24 +44,24 @@
       "editor/title": [
         {
           "command": "toggleScrollSync.enable",
-          "when": "resourceLangId == markdown || resourceLangId == html && toggleScrollSync.enabled == false",
+          "when": "(resourceLangId == markdown || resourceLangId == html) && toggleScrollSync.enabled == false",
           "group": "navigation"
         },
         {
           "command": "toggleScrollSync.disable",
-          "when": "resourceLangId == markdown || resourceLangId == html && toggleScrollSync.enabled == true",
+          "when": "(resourceLangId == markdown || resourceLangId == html) && toggleScrollSync.enabled == true",
           "group": "navigation"
         }
       ],
       "editor/title/context": [
         {
           "command": "toggleScrollSync.enable",
-          "when": "resourceLangId == markdown || resourceLangId == html && toggleScrollSync.enabled == false",
+          "when": "(resourceLangId == markdown || resourceLangId == html) && toggleScrollSync.enabled == false",
           "group": "1_modification"
         },
         {
           "command": "toggleScrollSync.disable",
-          "when": "resourceLangId == markdown || resourceLangId == html && toggleScrollSync.enabled == true",
+          "when": "(resourceLangId == markdown || resourceLangId == html) && toggleScrollSync.enabled == true",
           "group": "1_modification"
         }
       ]

@@ -1,0 +1,5 @@
+{
+    "html.preview.scrollPreviewWithEditor": false,
+    "html.preview.scrollEditorWithPreview": false,
+    "markdown.preview.scrollEditorWithPreview": false
+}

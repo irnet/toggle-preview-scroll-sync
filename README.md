@@ -22,7 +22,7 @@ A minimal VS Code extension that provides commands to toggle scroll synchronizat
 
 ### From VSIX File
 
-1. Download the `.vsix` file from the [Releases](https://github.com/yourusername/toggle-preview-scroll-sync/releases) page
+1. Download the `.vsix` file from the [Releases](https://github.com/irnet/toggle-preview-scroll-sync/releases) page
 2. Open VS Code
 3. Go to Extensions view (Ctrl+Shift+X)
 4. Click the "..." menu in the top-right corner
@@ -154,7 +154,7 @@ This project is licensed under the MIT License.
 
 For issues, questions, or suggestions:
 
-1. Open an issue on [GitHub](https://github.com/yourusername/toggle-preview-scroll-sync/issues)
+1. Open an issue on [GitHub](https://github.com/irnet/toggle-preview-scroll-sync/issues)
 2. Check existing issues before creating a new one
 3. Provide detailed information about the problem
 4. Include steps to reproduce the issue

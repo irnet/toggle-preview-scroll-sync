@@ -1,0 +1,31 @@
+# Source files
+AGENTS.md
+arv-styles-01.html
+
+# Documentation
+docs/
+.kilocode/
+
+# Development files
+.vscode/
+*.vsix
+
+# Node modules
+node_modules/
+
+# Test files
+**/*.test.js
+**/*.spec.js
+
+# Git files
+.git/
+.gitignore
+.github/
+
+# CI/CD
+.travis.yml
+.gitlab-ci.yml
+
+# Other
+*.md
+!README.md
