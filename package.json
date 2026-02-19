@@ -12,8 +12,14 @@
   "contributes": {
     "commands": [
       {
-        "command": "toggleScrollSync.toggle",
-        "title": "Toggle Scroll Sync",
+        "command": "toggleScrollSync.enable",
+        "title": "Toggle Preview Scroll Sync (to ON)",
+        "category": "Preview",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "toggleScrollSync.disable",
+        "title": "Toggle Preview Scroll Sync (to OFF)",
         "category": "Preview",
         "icon": "$(sync)"
       }
@@ -21,23 +27,36 @@
     "menus": {
       "commandPalette": [
         {
-          "command": "toggleScrollSync.toggle",
-          "when": "true"
+          "command": "toggleScrollSync.enable",
+          "when": "toggleScrollSync.enabled == false"
+        },
+        {
+          "command": "toggleScrollSync.disable",
+          "when": "toggleScrollSync.enabled == true"
         }
       ],
       "editor/title": [
         {
-          "command": "toggleScrollSync.toggle",
-          "when": "resourceLangId == markdown || resourceLangId == html",
+          "command": "toggleScrollSync.enable",
+          "when": "resourceLangId == markdown || resourceLangId == html && toggleScrollSync.enabled == false",
+          "group": "navigation"
+        },
+        {
+          "command": "toggleScrollSync.disable",
+          "when": "resourceLangId == markdown || resourceLangId == html && toggleScrollSync.enabled == true",
           "group": "navigation"
         }
       ],
       "editor/title/context": [
         {
-          "command": "toggleScrollSync.toggle",
-          "when": "resourceLangId == markdown || resourceLangId == html",
-          "group": "1_modification",
-          "checked": "toggleScrollSync.enabled"
+          "command": "toggleScrollSync.enable",
+          "when": "resourceLangId == markdown || resourceLangId == html && toggleScrollSync.enabled == false",
+          "group": "1_modification"
+        },
+        {
+          "command": "toggleScrollSync.disable",
+          "when": "resourceLangId == markdown || resourceLangId == html && toggleScrollSync.enabled == true",
+          "group": "1_modification"
         }
       ]
     }

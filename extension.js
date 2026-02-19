@@ -1,7 +1,8 @@
 const vscode = require('vscode');
 
 function activate(context) {
-    const command = vscode.commands.registerCommand('toggleScrollSync.toggle', async () => {
+    // Handler function for both commands
+    const toggleHandler = async () => {
         const config = vscode.workspace.getConfiguration(null);
         
         // Current values (default to true if not explicitly set)
@@ -17,7 +18,7 @@ function activate(context) {
             await config.update('html.preview.scrollEditorWithPreview', newValue, vscode.ConfigurationTarget.Workspace);
             await config.update('markdown.preview.scrollEditorWithPreview', newValue, vscode.ConfigurationTarget.Workspace);
 
-            // Update command checked state
+            // Update context to show/hide appropriate commands
             vscode.commands.executeCommand('setContext', 'toggleScrollSync.enabled', newValue);
 
             const status = newValue ? 'ON' : 'OFF';
@@ -25,11 +26,15 @@ function activate(context) {
         } catch (error) {
             vscode.window.showErrorMessage(`Error: ${error.message}`);
         }
-    });
+    };
 
-    context.subscriptions.push(command);
+    // Register both commands with the same handler
+    const enableCommand = vscode.commands.registerCommand('toggleScrollSync.enable', toggleHandler);
+    const disableCommand = vscode.commands.registerCommand('toggleScrollSync.disable', toggleHandler);
 
-    // Initialize command checked state on activation
+    context.subscriptions.push(enableCommand, disableCommand);
+
+    // Initialize context on activation
     const config = vscode.workspace.getConfiguration(null);
     const currentHtml = config.get('html.preview.scrollPreviewWithEditor', true);
     vscode.commands.executeCommand('setContext', 'toggleScrollSync.enabled', currentHtml);
