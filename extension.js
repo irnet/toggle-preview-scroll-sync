@@ -20,14 +20,21 @@ function updateContextForActiveEditor() {
     let settingValue = null;
     
     if (langId === 'html') {
+        // Check both possible HTML scroll sync settings
+        const scrollPreviewWithEditor = config.get('html.preview.scrollPreviewWithEditor', true);
+        const scrollEditorWithPreview = config.get('html.preview.scrollEditorWithPreview', true);
+        
         settingName = 'html.preview.scrollPreviewWithEditor';
         settingValue = config.inspect(settingName);
-        isEnabled = config.get(settingName, true);
+        isEnabled = scrollPreviewWithEditor && scrollEditorWithPreview;
+        
         console.log(`[ToggleScrollSync] HTML file detected`);
         console.log(`[ToggleScrollSync]   Setting: ${settingName}`);
         console.log(`[ToggleScrollSync]   Workspace value: ${settingValue?.workspaceValue}`);
         console.log(`[ToggleScrollSync]   Global value: ${settingValue?.globalValue}`);
         console.log(`[ToggleScrollSync]   Effective value: ${isEnabled}`);
+        console.log(`[ToggleScrollSync]   scrollPreviewWithEditor: ${scrollPreviewWithEditor}`);
+        console.log(`[ToggleScrollSync]   scrollEditorWithPreview: ${scrollEditorWithPreview}`);
     } else if (langId === 'markdown') {
         // Check both possible Markdown scroll sync settings
         const scrollEditorWithPreview = config.get('markdown.preview.scrollEditorWithPreview', true);
